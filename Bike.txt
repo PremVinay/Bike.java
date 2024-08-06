@@ -1,0 +1,48 @@
+class Bike{
+
+String model="Bajaj NS 200";
+boolean is_key_available=true;
+int petrol_level=4;
+int gear_Level=2;
+int trip1=3450;
+
+void EngineStart(){
+    System.out.println("-------------------------------------------------");
+
+    System.out.println("Holding clutch and Starting the Bike ...........");
+}
+void IncGearShift(){
+    gear_Level+=1;
+    System.out.println("GearLevel Increased by 1:  " +gear_Level);
+
+}
+
+void Brake(){
+System.out.println("Brakes were used , decreasing the speed and GearLevel");
+gear_Level-=1;
+System.out.println("Current_GearLevel:" +gear_Level);
+}
+
+void Stop(){
+System.out.println("Stopping the Bike ,,,,,,,");
+}
+
+
+}
+
+class Main{
+public static void main(String[] s)
+{
+Bike b= new Bike();
+
+System.out.println("is_key_available :"+ b.is_key_available);
+System.out.println("petrol_level :"+ b.petrol_level);
+System.out.println("gear_Level :" +b.gear_Level);
+System.out.println("Trip Details :"+ b.trip1);
+
+b.EngineStart();
+b.IncGearShift();
+b.Brake();
+b.Stop();
+}
+}
